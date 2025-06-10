@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина | SportNutrition</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="SportNutrition">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="cart.html" class="active">Корзина</a></li>
+                    <li><a href="login.html">Войти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart">
+            <div class="container">
+                <h1>Ваша корзина</h1>
+                
+                <div class="cart-container">
+                    <div class="cart-items">
+                        <div class="cart-header">
+                            <span>Товар</span>
+                            <span>Цена</span>
+                            <span>Количество</span>
+                            <span>Итого</span>
+                        </div>
+                        
+                        <div class="cart-items-list" id="cart-items">
+                            <!-- Товары будут загружаться через JavaScript -->
+                        </div>
+                        
+                        <div class="cart-total">
+                            <div class="total-row">
+                                <span>Промежуточный итог:</span>
+                                <span id="subtotal">0 руб.</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Доставка:</span>
+                                <span id="shipping">0 руб.</span>
+                            </div>
+                            <div class="total-row grand-total">
+                                <span>Всего:</span>
+                                <span id="grand-total">0 руб.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-form">
+                        <h2>Оформление заказа</h2>
+                        <form id="order-form">
+                            <div class="form-group">
+                                <label for="name">ФИО *</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон *</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Адрес доставки *</label>
+                                <textarea id="address" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="payment">Способ оплаты</label>
+                                <select id="payment">
+                                    <option value="card">Картой онлайн</option>
+                                    <option value="cash">Наличными при получении</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="comments">Комментарий к заказу</label>
+                                <textarea id="comments"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Оформить заказ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SportNutrition. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

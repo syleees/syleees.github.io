@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров | SportNutrition</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="SportNutrition">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="catalog.html" class="active"><i class="fas fa-list"></i> Каталог</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count">0</span></a></li>
+                    <li><a href="login.html"><i class="fas fa-user"></i> Войти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog fade-in">
+            <div class="container">
+                <h1><i class="fas fa-list"></i> Каталог товаров</h1>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="category"><i class="fas fa-tags"></i> Категория:</label>
+                        <select id="category">
+                            <option value="all">Все категории</option>
+                            <option value="protein">Протеин</option>
+                            <option value="gainer">Гейнер</option>
+                            <option value="amino">Аминокислоты</option>
+                            <option value="vitamin">Витамины</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="price"><i class="fas fa-ruble-sign"></i> Цена:</label>
+                        <select id="price">
+                            <option value="all">Любая цена</option>
+                            <option value="0-2000">До 2000 руб.</option>
+                            <option value="2000-5000">2000-5000 руб.</option>
+                            <option value="5000-10000">5000-10000 руб.</option>
+                            <option value="10000+">От 10000 руб.</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sort"><i class="fas fa-sort"></i> Сортировка:</label>
+                        <select id="sort">
+                            <option value="popular">По популярности</option>
+                            <option value="price-asc">По возрастанию цены</option>
+                            <option value="price-desc">По убыванию цены</option>
+                            <option value="new">Сначала новые</option>
+                            <option value="rating">По рейтингу</option>
+                        </select>
+                    </div>
+                    
+                    <button id="apply-filters" class="btn btn-success"><i class="fas fa-filter"></i> Применить</button>
+                    <button id="reset-filters" class="btn btn-secondary"><i class="fas fa-redo"></i> Сбросить</button>
+                </div>
+                
+                <div class="products-grid" id="products-container">
+                    <!-- Товары будут загружаться через JavaScript -->
+                    <div class="empty-message">
+                        <i class="fas fa-box-open"></i>
+                        <h3>Товары не найдены</h3>
+                        <p>Попробуйте изменить параметры фильтрации или зайдите позже</p>
+                        <a href="index.html" class="btn"><i class="fas fa-home"></i> На главную</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SportNutrition. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/catalog.js"></script>
+</body>
+</html>
